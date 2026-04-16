@@ -20,3 +20,9 @@ https://developer.valvesoftware.com/wiki/List_of_TF2_console_commands_and_variab
 https://wiki.alliedmods.net/Category:SourceMod_Development - Справочник, содержащая статьи по разработке плагинов для SourceMod.
 
 
+Для компиляции плагина используем команду:
+```
+make compile PLUGIN=path/to/plugin.sp
+```
+
+В проекте используется Sourcemod x64, как и сам сервер Team Fortress 2 в x64.
