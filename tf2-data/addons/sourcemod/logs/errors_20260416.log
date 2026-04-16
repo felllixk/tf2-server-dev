@@ -1,0 +1,6 @@
+L 04/16/2026 - 14:48:27: SourceMod error session started
+L 04/16/2026 - 14:48:27: Info (map "pl_cashworks") (file "/home/steam/tf-dedicated/tf/addons/sourcemod/logs/errors_20260416.log")
+L 04/16/2026 - 14:48:27: [UPDATER] --- BEGIN ERRORS FROM AUTOMATIC UPDATER ---
+L 04/16/2026 - 14:48:27: [UPDATER] Could not download "http://update.sourcemod.net/update/"
+L 04/16/2026 - 14:48:27: [UPDATER] Error: Empty reply from server
+L 04/16/2026 - 14:48:27: [UPDATER] --- END ERRORS FROM AUTOMATIC UPDATER ---
