@@ -24,9 +24,6 @@ run-sh: # Вход в контейнер
 compile: # Компиляция плагина: make compile PLUGIN=path/to/plugin.sp
 	@bash dev/compile_plugin.sh $(PLUGIN)
 
-rcon: # Выполнить RCON команду: make rcon CMD="sm plugins reload all"
-	docker compose exec tf2 /bin/bash -c 'rcon -H 127.0.0.1 -P 27015 -p "$$SRCDS_RCONPW" "$(CMD)"'
-
 sync: # Компиляция плагина: make compile PLUGIN=path/to/plugin.sp
 	@bash dev/sync.sh
 
