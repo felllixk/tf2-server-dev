@@ -13,13 +13,16 @@ services:
     restart: unless-stopped
     volumes:
       - ./tf2-server:/home/steam/tf-dedicated
+      - ./tf2-data/addons:/home/steam/tf-dedicated/tf/addons # Комментируем при первом запуске
+      - ./tf2-data/cfg:/home/steam/tf-dedicated/tf/cfg # Комментируем при первом запуске
+      - ./tf2-data/platform:/home/steam/tf-dedicated/platform # Комментируем при первом запуске
     environment:
       SRCDS_TOKEN: "{SRCDS_TOKEN}"
       SRCDS_RCONPW: "supersecket"
       SRCDS_PW: ""
       SRCDS_HOSTNAME: "TF2"
       SRCDS_MAXPLAYERS: "24"
-      SRCDS_STARTMAP: "pl_cashworks"
+      SRCDS_STARTMAP: "ctf_2fort"
       SRCDS_TICKRATE: "66"
       SRCDS_FPSMAX: "300"
       SRCDS_PORT: "27015"

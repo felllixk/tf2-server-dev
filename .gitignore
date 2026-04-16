@@ -1,3 +1,4 @@
 tf2-server/*
 !tf2-server/.gitkeep
 .env
+tf2-data/addons/sourcemod/logs/*

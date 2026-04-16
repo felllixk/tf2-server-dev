@@ -26,23 +26,15 @@ fi
 
 PLUGIN_NAME="$(basename "$PLUGIN_SRC" .sp)"
 
-SCRIPTING_DIR="$WORKSPACE_DIR/tf2-server/tf/addons/sourcemod/scripting"
+SCRIPTING_DIR="$WORKSPACE_DIR/tf2-data/addons/sourcemod/scripting"
 PLUGINS_DIR="$WORKSPACE_DIR/tf2-data/addons/sourcemod/plugins"
 
-mkdir -p "$SCRIPTING_DIR"
 mkdir -p "$PLUGINS_DIR"
-
-echo "==> Copying $PLUGIN_SRC -> $SCRIPTING_DIR/${PLUGIN_NAME}.sp"
-cp "$PLUGIN_SRC" "$SCRIPTING_DIR/${PLUGIN_NAME}.sp"
 
 echo "==> Compiling ${PLUGIN_NAME}.sp..."
 docker compose -f "$WORKSPACE_DIR/docker-compose.yml" run --rm tf2 \
     /home/steam/tf-dedicated/tf/addons/sourcemod/scripting/spcomp64 \
     /home/steam/tf-dedicated/tf/addons/sourcemod/scripting/${PLUGIN_NAME}.sp \
     -o /home/steam/tf-dedicated/tf/addons/sourcemod/plugins/${PLUGIN_NAME}.smx
-
-echo "==> Copying compiled plugin -> $PLUGINS_DIR/${PLUGIN_NAME}.smx"
-cp "$WORKSPACE_DIR/tf2-server/tf/addons/sourcemod/plugins/${PLUGIN_NAME}.smx" \
-   "$PLUGINS_DIR/${PLUGIN_NAME}.smx"
 
 echo "==> Done! Plugin compiled: $PLUGINS_DIR/${PLUGIN_NAME}.smx"
