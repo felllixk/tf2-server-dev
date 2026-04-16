@@ -1,10 +1,7 @@
-version: "3.8"
-
 services:
   tf2:
     image: cm2network/tf2:sourcemod-x64 # 64-битная версия с SourceMod
-
-    container_name: tf2-ze
+    container_name: tf2
     ports:
       - "27015:27015/udp" # Game port (обязательно UDP!)
       - "27015:27015/tcp" # RCON
@@ -20,7 +17,7 @@ services:
       SRCDS_TOKEN: "{SRCDS_TOKEN}"
       SRCDS_RCONPW: "supersecket"
       SRCDS_PW: ""
-      SRCDS_HOSTNAME: "TF2 Zombie Escape 64-bit | Docker"
+      SRCDS_HOSTNAME: "TF2"
       SRCDS_MAXPLAYERS: "24"
       SRCDS_STARTMAP: "pl_cashworks"
       SRCDS_TICKRATE: "66"
