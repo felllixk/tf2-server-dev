@@ -1,6 +1,6 @@
 services:
   tf2:
-    image: cm2network/tf2:sourcemod-x64 # 64-битная версия с SourceMod
+    image: cm2network/tf2:sourcemod # 64-битная версия с SourceMod
     container_name: tf2
     ports:
       - "27015:27015/udp" # Game port (обязательно UDP!)

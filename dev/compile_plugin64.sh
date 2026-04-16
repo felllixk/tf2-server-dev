@@ -31,9 +31,9 @@ PLUGINS_DIR="$WORKSPACE_DIR/tf2-data/addons/sourcemod/plugins"
 
 mkdir -p "$PLUGINS_DIR"
 
-echo "==> Compiling ${PLUGIN_NAME}.sp (32-bit)..."
+echo "==> Compiling ${PLUGIN_NAME}.sp (64-bit)..."
 docker compose -f "$WORKSPACE_DIR/docker-compose.yml" run --rm tf2 \
-    /home/steam/tf-dedicated/tf/addons/sourcemod/scripting/spcomp \
+    /home/steam/tf-dedicated/tf/addons/sourcemod/scripting/spcomp64 \
     /home/steam/tf-dedicated/tf/addons/sourcemod/scripting/${PLUGIN_NAME}.sp \
     -o /home/steam/tf-dedicated/tf/addons/sourcemod/plugins/${PLUGIN_NAME}.smx
 

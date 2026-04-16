@@ -21,8 +21,11 @@ sh: # Вход в контейнер
 run-sh: # Вход в контейнер
 	docker compose run --rm tf2 bash
 
-compile: # Компиляция плагина: make compile PLUGIN=path/to/plugin.sp
+compile: # Компиляция плагина (32-bit): make compile PLUGIN=path/to/plugin.sp
 	@bash dev/compile_plugin.sh $(PLUGIN)
+
+compile64: # Компиляция плагина (64-bit): make compile64 PLUGIN=path/to/plugin.sp
+	@bash dev/compile_plugin64.sh $(PLUGIN)
 
 sync: # Компиляция плагина: make compile PLUGIN=path/to/plugin.sp
 	@bash dev/sync.sh
