@@ -29,3 +29,6 @@ rcon: # Выполнить RCON команду: make rcon CMD="sm plugins reload
 
 sync: # Компиляция плагина: make compile PLUGIN=path/to/plugin.sp
 	@bash dev/sync.sh
+
+pull-modules: # Обновление подмодулей
+	git submodule update --init --recursive
