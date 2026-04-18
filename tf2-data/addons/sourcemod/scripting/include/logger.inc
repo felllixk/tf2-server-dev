@@ -137,16 +137,7 @@ static stock void Logger_WriteRaw(LogLevel level, const char[] msg)
 
     // Дублируем в чат всем игрокам (если включено)
     if (g_bPrintToChat && level >= LOG_INFO)
-    {
-        char chatColor[8];
-        switch (level)
-        {
-            case LOG_ERROR: strcopy(chatColor, sizeof(chatColor), "\x07FF4444");    // красный
-            case LOG_WARN: strcopy(chatColor, sizeof(chatColor), "\x07FFAA00");     // оранжевый
-            default: strcopy(chatColor, sizeof(chatColor), "\x0100CCFF");           // голубой
-        }
-        PrintToChatAll(" %s[%s]\x01 %s", chatColor, g_sLogTag, msg);
-    }
+        PrintToChatAll(" [%s] %s", g_sLogTag, msg);
 }
 
 // ─── Публичные функции логирования ───────────────────────────────────────────
