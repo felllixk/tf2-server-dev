@@ -1,0 +1,34 @@
+"Games"
+{
+    "tf"
+    {
+        "Signatures"
+        {
+            // Сигнатура нужна чтобы DHooks мог найти адрес функции в памяти
+            "Regenerate"
+            {
+                "library"   "server"
+                "linux"     "@_ZN9CTFPlayer10RegenerateEb"
+                "linux64"   "@_ZN9CTFPlayer10RegenerateEb"
+            }
+        }
+
+        "Functions"
+        {
+            "CTFPlayer::Regenerate"
+            {
+                "signature"     "Regenerate"
+                "callconv"      "thiscall"
+                "return"        "void"
+                "this"          "entity"
+                "arguments"
+                {
+                    "bFull"
+                    {
+                        "type"  "bool"
+                    }
+                }
+            }
+        }
+    }
+}
